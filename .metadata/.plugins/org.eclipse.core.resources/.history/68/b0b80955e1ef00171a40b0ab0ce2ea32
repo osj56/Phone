@@ -1,0 +1,27 @@
+package project;
+
+import javax.swing.JTextField;
+
+public class Info {
+	public JTextField name;
+	public JTextField pnum;
+	public JTextField grp;
+	
+	public Info(JTextField name, JTextField pnum, JTextField grp){
+		this.name = name;
+		this.pnum = pnum;
+		this.grp = grp;
+		
+	}
+	
+	public JTextField Name(){
+		return name;
+	}
+	public JTextField Pnum(){
+		return pnum;
+	}
+	public JTextField Grp(){
+		return grp;
+	}
+	
+}

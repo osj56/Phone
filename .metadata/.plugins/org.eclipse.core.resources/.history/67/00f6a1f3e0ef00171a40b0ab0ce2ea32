@@ -1,0 +1,25 @@
+package project;
+
+public class Info {
+	public String name;
+	public String pnum;
+	public String grp;
+	
+	public Info(String name, String pnum, String grp){
+		this.name = name;
+		this.pnum = pnum;
+		this.grp = grp;
+		
+	}
+	
+	public String Name(){
+		return name;
+	}
+	public String Pnum(){
+		return pnum;
+	}
+	public String Grp(){
+		return grp;
+	}
+	
+}

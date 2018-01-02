@@ -1,0 +1,17 @@
+package project;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Plus implements ActionListener{
+	JTextField jf;
+	
+	public Plus(JTextField jf){
+		this.jf = jf;
+	}
+	public void actionPerformed(ActionEvent e){
+		System.out.println("¿Ã∏ß: "+jf.getText());
+		jf.setText("");
+	}
+}

@@ -1,0 +1,20 @@
+package project;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Plus implements ActionListener{
+	JTextField jf;
+	JTextField pnum;
+	public Plus(JTextField jf, JTextField pnum){
+		this.jf = jf;
+		this.pnum = pnum;
+	}
+	public void actionPerformed(ActionEvent e){
+		System.out.println("이름: "+jf.getText());
+		System.out.println("번호: "+pnum.getText());
+		jf.setText("");
+		pnum.setText("");
+	}
+}

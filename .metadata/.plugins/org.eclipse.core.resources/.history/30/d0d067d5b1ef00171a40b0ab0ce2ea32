@@ -1,0 +1,67 @@
+package project;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+public class Main {
+	public static void main(String[] args){
+		Frame frm = new Frame("ver1");
+		JFrame jfrm = new JFrame("test");
+		
+		frm.setBounds(300, 300, 400, 300);
+		frm.setLayout(new FlowLayout());
+		jfrm.setBounds(120,120,180,80);
+		jfrm.setLayout(new GridLayout(2, 2));
+		
+		JLabel idLabel = new JLabel("ID ", SwingConstants.RIGHT);
+		JTextField idText = new JTextField(10);
+		
+		
+		WindowListener listen = new WindowAdapter(){
+			public void windowClosing(WindowEvent ev){
+				System.exit(0);
+			}
+		};
+		
+		frm.addWindowListener(listen);
+		
+		Button btn1 = new Button("등록");
+		Button btn2 = new Button("검색");
+		Button btn3 = new Button("리스트");
+		
+		frm.add(btn1);
+		frm.add(btn2);
+		frm.add(btn3);
+		
+		frm.setVisible(true);
+		
+		frm.addMouseMotionListener(new MouseMotionHandler());
+		frm.addMouseListener(new MouseEventHandler());
+		 
+		
+		btn1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				System.out.println("등록 클릭 ");
+				jfrm.add(idLabel);
+				jfrm.add(idText);
+				jfrm.setVisible(true);
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				System.out.println("검색 클릭 ");
+			}
+		});
+		
+		btn3.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				System.out.println("리스트 클릭 ");
+			}
+		});
+	}
+}
