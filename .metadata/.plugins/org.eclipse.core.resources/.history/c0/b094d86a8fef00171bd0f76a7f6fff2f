@@ -1,0 +1,20 @@
+package project;
+
+import java.awt.*;
+public class Main {
+	public static void main(String[] args){
+		Frame frm = new Frame("ver1");
+		frm.setBounds(120, 120, 400, 100);
+		frm.setLayout(new FlowLayout());
+		
+		Button btn1 = new Button("등록");
+		Button btn2 = new Button("검색");
+		Button btn3 = new Button("리스트");
+		
+		frm.add(btn1);
+		frm.add(btn2);
+		frm.add(btn3);
+		
+		frm.setVisible(true);
+	}
+}
