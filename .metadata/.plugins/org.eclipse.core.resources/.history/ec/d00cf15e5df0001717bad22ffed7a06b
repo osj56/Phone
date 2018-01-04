@@ -1,0 +1,15 @@
+package project;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+
+public class List extends Info implements ActionListener{
+
+	public List(JTextField name, JTextField pnum, JTextField grp) {
+		super(name, pnum, grp);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

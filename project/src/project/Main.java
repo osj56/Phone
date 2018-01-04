@@ -40,7 +40,7 @@ public class Main {
 		};
 		
 		frm.addWindowListener(listen);
-		jfrm.addWindowListener(listen);
+	//	jfrm.addWindowListener(listen);
 		
 		Button btn1 = new Button("등록");
 		Button btn2 = new Button("검색");
@@ -59,9 +59,11 @@ public class Main {
 		btn1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				System.out.println("등록 클릭 ");
+				
 				idText.addActionListener(new Plus(idText, pnumText, grpText));
 				pnumText.addActionListener(new Plus(idText, pnumText, grpText));
 				grpText.addActionListener(new Plus(idText, pnumText, grpText));
+				
 				jfrm.add(idLabel);
 				jfrm.add(idText);
 				jfrm.add(pnum);
@@ -84,7 +86,11 @@ public class Main {
 		
 		btn3.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+		
+				List list = new List();
 				System.out.println("리스트 클릭 ");
+				list.Print();
+				
 			}
 		});
 	}

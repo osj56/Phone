@@ -1,0 +1,30 @@
+package project;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+
+public class List extends Info implements ActionListener{
+	JTextField jf, pnum, grp;
+	
+	public List(JTextField jf, JTextField pnum, JTextField grp){
+		
+		super(jf, pnum, grp);
+	}
+	
+	
+	public void Print(){
+	
+		super.Print();
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

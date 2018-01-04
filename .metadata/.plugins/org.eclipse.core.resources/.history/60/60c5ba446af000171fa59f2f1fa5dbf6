@@ -1,0 +1,43 @@
+package project;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+
+public class List implements ActionListener{
+	private JTextField name;
+	private JTextField pnum;
+	private JTextField grp;
+	
+	Info info = new Info(name, pnum, grp);
+
+	public List() {
+		//super(name, pnum, grp);
+		// TODO Auto-generated constructor stub
+	}
+	public void setList(JTextField name, JTextField pnum, JTextField grp){
+		name = info.getName();
+		pnum = info.getPnum();
+		grp = info.getGrp();
+	}
+	public JTextField getName(){
+		return name;
+	}
+	public JTextField getPnum(){
+		return pnum;
+	}
+	public JTextField getGrp(){
+		return grp;
+	}
+	public void actionPerformed(ActionEvent e){
+	
+		System.out.println("이름 : "+getName());
+		System.out.println("번호: "+getPnum());
+		System.out.println("소속: "+getGrp());
+		name.setText("");
+		pnum.setText("");
+		grp.setText("");
+	}
+	
+}
