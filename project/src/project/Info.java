@@ -1,17 +1,17 @@
 package project;
 
 import javax.swing.JTextField;
-
+import java.util.*;
 public class Info {
 	public JTextField name;
 	public JTextField pnum;
 	public JTextField grp;
-	
+
 	public Info(JTextField name, JTextField pnum, JTextField grp){
 		this.name = name;
 		this.pnum = pnum;
 		this.grp = grp;
-		
+
 	}
 	public void setName(JTextField Name){
 		Name = name;
@@ -20,7 +20,7 @@ public class Info {
 	public void setPnum(JTextField Pnum){
 		Pnum = name;
 	}
-	
+
 	public void setGrp(JTextField Grp){
 		Grp = grp;
 	}
@@ -34,13 +34,13 @@ public class Info {
 		return grp;
 	}
 	public void Print(){
-	 
-		System.out.println("ÀÌ¸§: "+name.getText());
-		System.out.println("¹øÈ£: "+pnum.getText());
-		System.out.println("¼Ò¼Ó: "+grp.getText());
+
+		System.out.println("ï¿½Ì¸ï¿½: "+name.getText());
+		System.out.println("ï¿½ï¿½È£: "+pnum.getText());
+		System.out.println("ï¿½Ò¼ï¿½: "+grp.getText());
 		name.setText("");
 		pnum.setText("");
 		grp.setText("");
 	}
-	
+
 }
